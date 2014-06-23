@@ -8,5 +8,9 @@
     <string android:layout_height="wrap_content" android:id="@+id/string1" android:layout_width="wrap_content" name="kg">kg</string>
     <string android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/string1" name="convert_to_lb">Convert to lb</string>
     <string android:layout_height="wrap_content" android:id="@+id/string1" android:layout_width="wrap_content" name="convert_to_kg">Convert to kg</string>
+    <string-array name="units_array">
+        <item>lb</item>
+        <item>kg</item>
+    </string-array>
 
 </resources>
