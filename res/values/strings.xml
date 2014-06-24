@@ -11,6 +11,9 @@
     <string-array name="units_array">
         <item>lb</item>
         <item>kg</item>
+        <item>st</item>
+        <item>oz</item>
+        <item>g</item>
     </string-array>
 
 </resources>

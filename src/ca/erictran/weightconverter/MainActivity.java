@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity {
     	}
     	
     	double inputValue = Double.parseDouble(input.getText().toString());
-    	DecimalFormat df = new DecimalFormat("#.00");
+    	DecimalFormat df = new DecimalFormat("0.##########");
     	switch (view.getId()) {
     	case R.id.button1:
     		output.setText(df.format(inputValue) + " " + spinner.getSelectedItem() + " =");
