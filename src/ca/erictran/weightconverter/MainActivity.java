@@ -18,12 +18,13 @@ import android.widget.Toast;
 
 import java.text.*;
 
+import android.R.string;
 import android.app.Activity;
 import android.view.inputmethod.*;
 
 public class MainActivity extends ActionBarActivity {
 	
-	private EditText input;
+	private String input;
 	private TextView output, output2;
 	
 	private Spinner spinner, spinner2;
@@ -33,7 +34,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        input = (EditText) findViewById(R.id.editText1);
+        input = "0";
         output = (TextView) findViewById(R.id.textView2);
         output2 = (TextView) findViewById(R.id.textView3);
         
@@ -59,21 +60,66 @@ public class MainActivity extends ActionBarActivity {
     
     public void onClick(View view) {
     	
-    	hideSoftKeyboard(this);
-    	
-    	if (input.getText().length() == 0) {
-    		Toast.makeText(this, "Please enter a number.", Toast.LENGTH_LONG).show();
-    		return;
-    	}
-    	
-    	double inputValue = Double.parseDouble(input.getText().toString());
-    	DecimalFormat df = new DecimalFormat("0.##########");
     	switch (view.getId()) {
-    	case R.id.button1:
-    		output.setText(df.format(inputValue) + " " + spinner.getSelectedItem() + " =");
-    		output2.setText(df.format(ConverterUtil.convertUnits(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue)) + " " + spinner2.getSelectedItem());
-    		return;
+    	case R.id.Button1:
+    		input = input + "1";
+    		break;
+    	case R.id.Button2:
+    		input = input + "2";
+    		break;
+    	case R.id.Button3:
+    		input = input + "3";
+    		break;
+    	case R.id.Button4:
+    		input = input + "4";
+    		break;
+    	case R.id.Button5:
+    		input = input + "5";
+    		break;
+    	case R.id.Button6:
+    		input = input + "6";
+    		break;
+    	case R.id.Button7:
+    		input = input + "7";
+    		break;
+    	case R.id.Button8:
+    		input = input + "8";
+    		break;
+    	case R.id.Button9:
+    		input = input + "9";
+    		break;
+    	case R.id.Button0:
+    		input = input + "0";
+    		break;
+    	case R.id.Button04:
+        	if (input.length() == 0) {
+        		Toast.makeText(this, "Please enter a number.", Toast.LENGTH_LONG).show();
+        		return;
+        	}
+
+    		if (input == null || input.length() == 1) {
+    			input = "0";
+    			return;
+    		}
+    		else
+    			input = input.substring(0, input.length()-1);
+    		break;
+    	case R.id.Button08:
+    		int tempId = (int)spinner.getSelectedItemId();
+    		spinner.setSelection((int)spinner2.getSelectedItemId());
+    		spinner2.setSelection(tempId);
+    		break;
     	}
+    	
+    	double inputValue = Double.parseDouble(input);
+    	double inputValue2 = ConverterUtil.convertUnits(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue);
+    	DecimalFormat df = new DecimalFormat("#,###.##########");
+    	
+    	output.setText(df.format(inputValue));
+		output2.setText(df.format(inputValue2));    	
+    	
+//    	output.setText(df.format(inputValue));
+//		output2.setText(df.format(ConverterUtil.convertUnits(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue)));
     }
 
 }
