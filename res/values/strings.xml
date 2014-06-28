@@ -3,6 +3,7 @@
 
     <string name="app_name">Weight Converter</string>
     <string name="action_settings">Settings</string>
+    
     <string-array name="units_array">
         <item>lb</item>
         <item>kg</item>
@@ -10,5 +11,26 @@
         <item>oz</item>
         <item>g</item>
     </string-array>
+    
+    <color name="primary">#3f51b5</color>
+    <color name="accent">#ff4081</color>
+    
+    <string name="default_value">0</string>
+    
+    <string name="Button1">1</string>
+    <string name="Button2">2</string>
+    <string name="Button3">3</string>
+    <string name="Button4">4</string>
+    <string name="Button5">5</string>
+    <string name="Button6">6</string>
+    <string name="Button7">7</string>
+    <string name="Button8">8</string>
+    <string name="Button9">9</string>
+    <string name="Button0">0</string>
+    <string name="ButtonDecimal">.</string>
+    <string name="ButtonClear">Clear</string>
+    <string name="ButtonBackspace">Backspace</string>
+    <string name="ButtonSwitch">Switch</string>
+    
 
 </resources>
