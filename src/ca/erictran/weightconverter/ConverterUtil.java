@@ -1,8 +1,10 @@
 package ca.erictran.weightconverter;
 
+//ConverterUtil: utility class for converting weight units
+
 public class ConverterUtil {
 	
-	//converts units to pounds then to the conversion unit
+	//convertUnits: converts units to pounds then to the conversion unit
 	
 	public static double convertUnits(long unit1, long unit2, double value) {
 		
@@ -13,7 +15,7 @@ public class ConverterUtil {
 
 	}
 	
-	//converts all units to pounds, thus using pounds as a base unit
+	//convertToPounds: converts all units to pounds (thus using pounds as a base unit)
 	
 	public static double convertToPounds(long unit, double value) {
 		
@@ -35,7 +37,7 @@ public class ConverterUtil {
 		}
 	}
 	
-	//converts from pounds to other units
+	//convertFromPounds: converts from pounds to other units
 	
 	public static double convertFromPounds(long unit, double value) {
 		

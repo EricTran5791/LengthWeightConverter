@@ -91,7 +91,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button7"
                 android:textColor="#fafafa"
@@ -104,7 +104,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button8"
                 android:textColor="#fafafa"
@@ -117,7 +117,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button9"
                 android:textColor="#fafafa"
@@ -130,7 +130,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/accent"
+                android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonClear"
                 android:onClick="onClick"
                 android:src="@drawable/ic_action_content_clear" />
@@ -149,7 +149,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button4"
                 android:textColor="#fafafa"
@@ -162,7 +162,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button5"
                 android:textColor="#fafafa"
@@ -175,7 +175,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button6"
                 android:textColor="#fafafa"
@@ -188,7 +188,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/accent"
+                android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonBackspace"
                 android:onClick="onClick"
                 android:src="@drawable/ic_action_content_backspace" />
@@ -207,7 +207,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button1"
                 android:textColor="#fafafa"
@@ -220,7 +220,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button2"
                 android:textColor="#fafafa"
@@ -233,7 +233,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/primary"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button3"
                 android:textColor="#fafafa"
@@ -246,7 +246,7 @@
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
                 android:layout_weight=".25"
-                android:background="@color/accent"
+                android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonSwitch"
                 android:onClick="onClick"
                 android:src="@drawable/ic_action_content_switch" />
@@ -255,8 +255,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:weightSum="1.0" >
+            android:layout_height="60dp" >
 
             <Button
                 android:id="@+id/Button0"
@@ -264,8 +263,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
-                android:layout_weight=".25"
-                android:background="@color/primary"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/Button0"
                 android:textColor="#fafafa"
@@ -277,18 +276,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_margin="1dp"
-                android:layout_weight=".25"
-                android:background="@color/primary"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
                 android:onClick="onClick"
                 android:text="@string/ButtonDecimal"
                 android:textColor="#fafafa"
                 android:textSize="40sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight=".5" >
-            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>

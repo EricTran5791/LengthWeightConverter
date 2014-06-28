@@ -18,9 +18,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.*;
-
-
 public class MainActivity extends ActionBarActivity implements OnItemSelectedListener {
 	
 	private String input;
@@ -134,16 +131,20 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
     	}
     	
     	double outputValue = ConverterUtil.convertUnits(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue);
-    	DecimalFormat df = new DecimalFormat("#,###.##########");
+
     	
     	if (decimalEntered && !enteredAfterDecimal && input.charAt(input.length() - 1) != '.') { //if flag false and last char not a decimal
     		enteredAfterDecimal = true;
     	}
+    	    
     	
-    	String regex = "^0+(?!$)"; //to remove leading zeros from input's output
-    	
-    	output.setText(input.replaceAll(regex, ""));
-    	output2.setText(df.format(outputValue));  
+    	if (decimalEntered) {
+    		output.setText(FormatUtil.extractNonDecimal(inputValue) + FormatUtil.extractDecimal(input));
+    	}
+    	else {
+    		output.setText(FormatUtil.formatNumber(inputValue));
+    	}
+    	output2.setText(FormatUtil.formatNumber(outputValue));  
     	
     }
 
