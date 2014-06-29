@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,7 +21,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity implements OnItemSelectedListener {
 	
-	private String input;
+	private String input = "0";
 	private TextView output, output2;
 	private boolean decimalEntered, enteredAfterDecimal;
 	
@@ -29,13 +30,18 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        int orientation = this.getResources().getConfiguration().orientation;
         
-        input = "0";
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(R.layout.activity_main);
+        }
+        else {
+        	setContentView(R.layout.activity_landscape);
+        }
+        
         output = (TextView) findViewById(R.id.textView2);
         output2 = (TextView) findViewById(R.id.textView3);
-        decimalEntered = false;
-        enteredAfterDecimal = false;
         
         spinner = (Spinner) findViewById(R.id.spinner1);
         spinner2 = (Spinner) findViewById(R.id.spinner2);
@@ -52,7 +58,30 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
         spinner2.setOnItemSelectedListener(this);
     }
     
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+
+    	super.onSaveInstanceState(outState);
+    	
+    	outState.putString("input", input);
+    	outState.putBoolean("decimalEntered", decimalEntered);
+    	outState.putBoolean("enteredAfterDecimal", enteredAfterDecimal);
+    }
+    
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+
+    	super.onRestoreInstanceState(savedInstanceState);
+    	
+    	input = savedInstanceState.getString("input");
+    	decimalEntered = savedInstanceState.getBoolean("decimalEntered");
+    	enteredAfterDecimal = savedInstanceState.getBoolean("enteredAfterDecimal");
+    }
+    
     public void onClick(View view) {
+    	
+    	if (view == null)
+    		return;
     	
     	switch (view.getId()) {
     	case R.id.Button1:
@@ -154,7 +183,7 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
 	}
 
 	@Override
-	public void onNothingSelected(AdapterView<?> arg0) {
+	public void onNothingSelected(AdapterView<?> parent) {
 		
 	}
 
