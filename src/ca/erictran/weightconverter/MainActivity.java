@@ -1,13 +1,13 @@
 package ca.erictran.weightconverter;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,6 +56,15 @@ public class MainActivity extends ActionBarActivity implements OnItemSelectedLis
         spinner2.setAdapter(adapter2);
         spinner2.setSelection(1);
         spinner2.setOnItemSelectedListener(this);
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+    	MenuInflater inflater = getMenuInflater ();
+    	inflater.inflate(R.menu.main, menu);
+    	
+    	return super.onCreateOptionsMenu(menu);
     }
     
     @Override

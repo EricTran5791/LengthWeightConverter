@@ -5,6 +5,8 @@
           android:state_pressed="true" />
     <item android:drawable="@color/primary_dark"
           android:state_focused="true" />
-    <item android:drawable="@color/primary" />   
+    <item android:drawable="@color/primary" />
+    
+    
 
 </selector>
