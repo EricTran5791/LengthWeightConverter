@@ -3,22 +3,28 @@
 
     <string name="app_name">Weight Converter</string>
     <string name="action_core_overflow">Overflow</string>
+
+    <string-array name="length_array">
+        <item>in</item>
+        <item>cm</item>
+        <item>m</item>
+    </string-array>
     
-    <string-array name="units_array">
+    <string-array name="weight_array">
         <item>lb</item>
         <item>kg</item>
         <item>st</item>
         <item>oz</item>
         <item>g</item>
     </string-array>
-    
-    <color name="primary">#3f51b5</color>
-    <color name="primary_dark">#1a237e</color>
-    <color name="accent">#ff4081</color>
-    <color name="accent_dark">#880e4f</color>
-    
+
+    <color name="action_bar">#00acc1</color>
+    <color name="primary">#616161</color>
+    <color name="primary_dark">#424242</color>
+    <color name="accent">#00bfa5</color>
+    <color name="accent_dark">#00695c</color>
+
     <string name="default_value">0</string>
-    
     <string name="Button1">1</string>
     <string name="Button2">2</string>
     <string name="Button3">3</string>
@@ -33,6 +39,5 @@
     <string name="ButtonClear">Clear</string>
     <string name="ButtonBackspace">Backspace</string>
     <string name="ButtonSwitch">Switch</string>
-    
 
 </resources>

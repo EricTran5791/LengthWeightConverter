@@ -1,12 +1,57 @@
 package ca.erictran.weightconverter;
 
-//ConverterUtil: utility class for converting weight units
+//ConverterUtil: utility class for converting length and weight units
 
 public class ConverterUtil {
 	
-	//convertUnits: converts units to pounds then to the conversion unit
+	//convertLength: converts units to inches then to the conversion unit
 	
-	public static double convertUnits(long unit1, long unit2, double value) {
+	public static double convertLength(long unit1, long unit2, double value) {
+		
+		if (unit1 == unit2)
+			return value;
+
+		return convertFromInches(unit2, convertToInches(unit1, value));
+
+	}
+	
+	//convertToInches: converts all units to inches (thus using inches as a base unit)
+	
+	public static double convertToInches(long unit, double value) {
+		int unitInt = (int) unit;
+		
+		switch (unitInt) {
+		case 0: //inches
+			return value;
+		case 1: //centimetres
+			return value*0.393701;
+		case 2: //metres
+			return value*39.3701;
+		default:
+			return value;
+		}
+	}
+	
+	//convertFromInches: converts from inches to other units
+	
+	public static double convertFromInches(long unit, double value) {
+		int unitInt = (int) unit;
+		
+		switch (unitInt) {
+		case 0: //inches
+			return value;
+		case 1: //centimetres
+			return value*2.54;
+		case 2: //metres
+			return value*0.0254;
+		default:
+			return value;
+		}
+	}
+	
+	//convertWeight: converts units to pounds then to the conversion unit
+	
+	public static double convertWeight(long unit1, long unit2, double value) {
 		
 		if (unit1 == unit2)
 			return value;
@@ -18,7 +63,6 @@ public class ConverterUtil {
 	//convertToPounds: converts all units to pounds (thus using pounds as a base unit)
 	
 	public static double convertToPounds(long unit, double value) {
-		
 		int unitInt = (int) unit;
 		
 		switch (unitInt) {
@@ -40,7 +84,6 @@ public class ConverterUtil {
 	//convertFromPounds: converts from pounds to other units
 	
 	public static double convertFromPounds(long unit, double value) {
-		
 		int unitInt = (int) unit;
 		
 		switch (unitInt) {

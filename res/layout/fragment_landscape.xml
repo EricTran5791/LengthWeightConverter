@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:background="@color/action_bar"
     android:fitsSystemWindows="true"
     tools:context="ca.erictran.weightconverter.MainActivity$PlaceholderFragment" >
 
@@ -11,7 +11,8 @@
         android:layout_height="match_parent"
         android:background="@android:color/background_light"
         android:baselineAligned="false"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -85,9 +86,10 @@
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_height="fill_parent"
             android:layout_weight="1.5"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
             android:orientation="vertical" >
 
             <LinearLayout
@@ -100,7 +102,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -113,7 +114,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -126,7 +126,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -139,7 +138,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button2"
                     android:contentDescription="@string/ButtonClear"
@@ -157,7 +155,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -170,7 +167,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -183,7 +179,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -196,7 +191,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button2"
                     android:contentDescription="@string/ButtonBackspace"
@@ -214,7 +208,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -227,7 +220,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -240,7 +232,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -253,7 +244,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight=".25"
                     android:background="@drawable/custom_button2"
                     android:contentDescription="@string/ButtonSwitch"
@@ -270,7 +260,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
@@ -283,7 +272,6 @@
                     style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_margin="1dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_button"
                     android:onClick="onClick"
