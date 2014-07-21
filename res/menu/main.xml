@@ -3,10 +3,5 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="ca.erictran.weightconverter.MainActivity" >
 
-    <item
-        android:id="@+id/action_core_overflow"
-        android:icon="@drawable/ic_action_core_overflow"
-        android:title="@string/action_core_overflow"
-        app:showAsAction="ifRoom" />
 
 </menu>

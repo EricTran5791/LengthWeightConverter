@@ -1,6 +1,5 @@
 package ca.erictran.weightconverter;
 
-import android.app.Fragment;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.AdapterView;
@@ -14,8 +13,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.actionbarsherlock.app.SherlockFragment;
 
-public class WeightFragment extends Fragment implements OnItemSelectedListener, View.OnClickListener {
+public class WeightFragment extends SherlockFragment implements OnItemSelectedListener, View.OnClickListener {
 	
 	private String input = "0";
 	private TextView output, output2;
