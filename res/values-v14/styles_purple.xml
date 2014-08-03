@@ -24,6 +24,8 @@
         <item name="android:popupMenuStyle">@style/PopupMenu.Purple</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Purple</item>
         <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Purple</item>
+        <item name="android:actionBarTabBarStyle">@style/ActionBarTabBar.Purple</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabTextStyle.Purple</item>
         <item name="android:actionDropDownStyle">@style/DropDownNav.Purple</item>
         <item name="android:actionBarStyle">@style/ActionBar.Solid.Purple</item>
         <item name="android:actionModeBackground">@drawable/cab_background_top_purple</item>

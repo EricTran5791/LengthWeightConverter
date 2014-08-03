@@ -19,10 +19,11 @@
     </string-array>
 
     <color name="action_bar">#673ab7</color>
-    <color name="primary">#616161</color>
-    <color name="primary_dark">#424242</color>
+    <color name="primary">#424242</color>
+    <color name="primary_dark">#000000</color>
     <color name="accent">#673ab7</color>
     <color name="accent_dark">#311b92</color>
+
 
     <string name="default_value">0</string>
     <string name="Button1">1</string>

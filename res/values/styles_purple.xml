@@ -24,6 +24,8 @@
         <item name="popupMenuStyle">@style/PopupMenu.Purple</item>
         <item name="dropDownListViewStyle">@style/DropDownListView.Purple</item>
         <item name="actionBarTabStyle">@style/ActionBarTabStyle.Purple</item>
+        <item name="android:actionBarTabBarStyle">@style/ActionBarTabBar.Purple</item>
+        <item name="android:actionBarTabTextStyle">@style/ActionBarTabTextStyle.Purple</item>
         <item name="actionDropDownStyle">@style/DropDownNav.Purple</item>
         <item name="actionBarStyle">@style/ActionBar.Solid.Purple</item>
         <item name="actionModeBackground">@drawable/cab_background_top_purple</item>
@@ -60,6 +62,14 @@
 
     <style name="ActionBarTabStyle.Purple" parent="@style/Widget.Sherlock.ActionBar.TabView">
         <item name="android:background">@drawable/tab_indicator_ab_purple</item>
+    </style>
+
+    <style name="ActionBarTabBar.Purple" parent="Widget.Sherlock.ActionBar.TabBar">
+        <item name="android:showDividers">none</item>
+    </style>
+
+    <style name="ActionBarTabTextStyle.Purple" parent="Widget.Sherlock.ActionBar.TabText">
+        <item name="android:textColor">@color/tab_text</item>
     </style>
 	
     <style name="DropDownNav.Purple" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
