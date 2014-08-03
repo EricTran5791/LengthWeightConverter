@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WeightConverter.iml" filepath="$PROJECT_DIR$/WeightConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LengthWeightConverter.iml" filepath="$PROJECT_DIR$/LengthWeightConverter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock.iml" />
     </modules>
   </component>

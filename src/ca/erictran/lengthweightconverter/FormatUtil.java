@@ -1,4 +1,4 @@
-package ca.erictran.weightconverter;
+package ca.erictran.lengthweightconverter;
 
 import java.text.DecimalFormat;
 

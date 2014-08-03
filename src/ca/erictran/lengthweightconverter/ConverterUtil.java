@@ -1,49 +1,49 @@
-package ca.erictran.weightconverter;
+package ca.erictran.lengthweightconverter;
 
 //ConverterUtil: utility class for converting length and weight units
 
 public class ConverterUtil {
 	
-	//convertLength: converts units to inches then to the conversion unit
+	//convertLength: converts units to centimetres then to the conversion unit
 	
 	public static double convertLength(long unit1, long unit2, double value) {
 		
 		if (unit1 == unit2)
 			return value;
 
-		return convertFromInches(unit2, convertToInches(unit1, value));
+		return convertFromCentimetres(unit2, convertToCentimetres(unit1, value));
 
 	}
 	
-	//convertToInches: converts all units to inches (thus using inches as a base unit)
+	//convertToCentimetres: converts all units to centimetres (thus using inches as a base unit)
 	
-	public static double convertToInches(long unit, double value) {
+	public static double convertToCentimetres(long unit, double value) {
 		int unitInt = (int) unit;
 		
 		switch (unitInt) {
 		case 0: //inches
-			return value;
+			return value*2.54;
 		case 1: //centimetres
-			return value*0.393701;
+			return value;
 		case 2: //metres
-			return value*39.3701;
+			return value*100;
 		default:
 			return value;
 		}
 	}
 	
-	//convertFromInches: converts from inches to other units
+	//convertFromCentimetres: converts from centimetres to other units
 	
-	public static double convertFromInches(long unit, double value) {
+	public static double convertFromCentimetres(long unit, double value) {
 		int unitInt = (int) unit;
 		
 		switch (unitInt) {
 		case 0: //inches
-			return value;
+			return value*0.393701;
 		case 1: //centimetres
-			return value*2.54;
+			return value;
 		case 2: //metres
-			return value*0.0254;
+			return value*0.01;
 		default:
 			return value;
 		}

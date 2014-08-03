@@ -1,4 +1,4 @@
-package ca.erictran.weightconverter;
+package ca.erictran.lengthweightconverter;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -9,13 +9,12 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.actionbarsherlock.app.SherlockFragment;
 
-public class WeightFragment extends SherlockFragment implements OnItemSelectedListener, View.OnClickListener {
+public class LengthFragment extends SherlockFragment implements OnItemSelectedListener, View.OnClickListener {
 	
 	private String input = "0";
 	private TextView output, output2;
@@ -82,12 +81,12 @@ public class WeightFragment extends SherlockFragment implements OnItemSelectedLi
         spinner = (Spinner) view.findViewById(R.id.spinner1);
         spinner2 = (Spinner) view.findViewById(R.id.spinner2);
         
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.weight_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(), R.array.length_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.weight_array, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.length_array, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
         spinner2.setSelection(1);
@@ -197,7 +196,7 @@ public class WeightFragment extends SherlockFragment implements OnItemSelectedLi
     		inputValue = Double.parseDouble(input);
     	}
     	
-    	double outputValue = ConverterUtil.convertWeight(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue);
+    	double outputValue = ConverterUtil.convertLength(spinner.getSelectedItemId(), spinner2.getSelectedItemId(), inputValue);
 
     	
     	if (decimalEntered && !enteredAfterDecimal && input.charAt(input.length() - 1) != '.') { //if flag false and last char not a decimal

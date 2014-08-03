@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <string name="app_name">Weight Converter</string>
+    <string name="app_name">Length Weight Converter</string>
     <string name="action_core_overflow">Overflow</string>
 
     <string-array name="length_array">

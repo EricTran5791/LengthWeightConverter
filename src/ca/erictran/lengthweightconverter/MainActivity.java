@@ -1,11 +1,10 @@
-package ca.erictran.weightconverter;
+package ca.erictran.lengthweightconverter;
 
 import android.support.v4.app.FragmentTransaction;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.app.ActionBar;
 
 import android.os.Bundle;
-import android.util.Log;
 
 public class MainActivity extends SherlockFragmentActivity {
 
@@ -49,13 +48,17 @@ public class MainActivity extends SherlockFragmentActivity {
         weightTab.setTabListener(new TabListener(this, weightFragment));
 
         //add tabs to actionbar
+        actionBar.addTab(lengthTab, 0);
+        actionBar.addTab(weightTab, 1);
+
+        // set selected tab
         if (curTabPos == 0) {
-            actionBar.addTab(lengthTab, 0, true);
-            actionBar.addTab(weightTab, 1, false);
+            actionBar.selectTab(weightTab);
+            actionBar.selectTab(lengthTab);
         }
         else {
-            actionBar.addTab(lengthTab, 0, false);
-            actionBar.addTab(weightTab, 1, true);
+            actionBar.selectTab(lengthTab);
+            actionBar.selectTab(weightTab);
         }
     }
 
@@ -70,6 +73,7 @@ public class MainActivity extends SherlockFragmentActivity {
             getSupportFragmentManager().putFragment(outState, "weightFragment", weightFragment);
         }
 
+        //save the current tab position
         outState.putInt("curTabPos", actionBar.getSelectedNavigationIndex());
 
     }
