@@ -5,101 +5,93 @@
     android:fitsSystemWindows="true"
     tools:context="ca.erictran.lengthweightconverter.MainActivity$PlaceholderFragment" >
 
-    <LinearLayout
-            android:orientation="vertical"
+    <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:weightSum="1.0">
+            android:layout_height="fill_parent">
 
-        <RelativeLayout
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:baselineAligned="false"
+                android:layout_above="@+id/linearLayout5">
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:fillViewport="true"
+                android:layout_marginRight="1dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:freezesText="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:text="@string/default_value"
+                    android:textSize="70sp"
+                    android:gravity="center"/>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="vertical"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:fillViewport="true"
+                android:layout_marginLeft="1dp">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:freezesText="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:text="@string/default_value"
+                    android:textSize="70sp"
+                    android:gravity="center"/>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_weight=".6">
+                android:layout_above="@+id/linearLayout4"
+                android:id="@+id/linearLayout5">
 
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/linearLayout5"
-                    android:gravity="center_vertical">
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                    />
 
-                <ScrollView
-                    android:id="@+id/scrollView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:scrollbars="vertical"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:fillViewport="true">
-
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:freezesText="true"
-                        android:scrollbarAlwaysDrawVerticalTrack="false"
-                        android:text="@string/default_value"
-                        android:textSize="40sp"
-                        android:gravity="center_vertical|right"/>
-                </ScrollView>
-
-                <Spinner
-                    android:id="@+id/spinner1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:minWidth="170dp"
-                        />
-            </LinearLayout>
-
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/linearLayout5"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:gravity="center_vertical">
-
-                <ScrollView
-                    android:id="@+id/scrollView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:scrollbars="vertical"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:fillViewport="true">
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:freezesText="true"
-                        android:scrollbarAlwaysDrawVerticalTrack="false"
-                        android:text="@string/default_value"
-                        android:textSize="40sp"
-                        android:gravity="center_vertical|right"/>
-                </ScrollView>
-
-                <Spinner
-                    android:id="@+id/spinner2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:minWidth="170dp" />
-
-            </LinearLayout>
-        </RelativeLayout>
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                    />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:weightSum="1.0"
-            android:id="@+id/linearLayout4"
-            android:layout_weight=".1">
+            android:layout_above="@+id/linearLayout3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout4">
 
             <Button
                 android:id="@+id/Button7"
@@ -108,9 +100,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button7"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button8"
@@ -119,9 +112,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button8"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button9"
@@ -130,27 +124,31 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button9"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <ImageButton
                 android:id="@+id/ButtonClear"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonClear"
+                android:onClick="onClick"
                 android:src="@drawable/ic_action_content_clear" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:weightSum="1.0"
-            android:id="@+id/linearLayout3"
-            android:layout_weight=".1">
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout3">
 
             <Button
                 android:id="@+id/Button4"
@@ -159,9 +157,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button4"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button5"
@@ -170,9 +169,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button5"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button6"
@@ -181,27 +181,32 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button6"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <ImageButton
                 android:id="@+id/ButtonBackspace"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonBackspace"
-                android:src="@drawable/ic_action_content_backspace" />
+                android:onClick="onClick"
+                android:src="@drawable/ic_action_content_backspace"
+                android:layout_gravity="top"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="80dp"
             android:weightSum="1.0"
-            android:id="@+id/linearLayout2"
-            android:layout_weight=".1">
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout2">
 
             <Button
                 android:id="@+id/Button1"
@@ -210,9 +215,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button1"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button2"
@@ -221,9 +227,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button2"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/Button3"
@@ -232,26 +239,30 @@
                 android:layout_height="fill_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button3"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <ImageButton
                 android:id="@+id/ButtonSwitch"
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:background="@drawable/custom_button2"
                 android:contentDescription="@string/ButtonSwitch"
+                android:onClick="onClick"
                 android:src="@drawable/ic_action_content_switch" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout"
-            android:layout_weight=".1">
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout">
 
             <Button
                 android:id="@+id/Button0"
@@ -260,9 +271,10 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/Button0"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
 
             <Button
                 android:id="@+id/ButtonDecimal"
@@ -271,10 +283,12 @@
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
                 android:background="@drawable/custom_button"
+                android:onClick="onClick"
                 android:text="@string/ButtonDecimal"
                 android:textColor="#fafafa"
-                android:textSize="40sp" />
+                android:textSize="50sp" />
         </LinearLayout>
-    </LinearLayout>
+
+    </RelativeLayout>
 
 </FrameLayout>
