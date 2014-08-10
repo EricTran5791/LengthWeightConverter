@@ -103,6 +103,8 @@ public class WeightFragment extends SherlockFragment implements OnItemSelectedLi
 	    	input = savedInstanceState.getString("input");
 	    	decimalEntered = savedInstanceState.getBoolean("decimalEntered");
 	    	enteredAfterDecimal = savedInstanceState.getBoolean("enteredAfterDecimal");
+            spinner.setSelection(savedInstanceState.getInt("spinnerPos"));
+            spinner2.setSelection(savedInstanceState.getInt("spinner2Pos"));
 		}
 	}
 	
@@ -118,6 +120,8 @@ public class WeightFragment extends SherlockFragment implements OnItemSelectedLi
     	outState.putString("input", input);
     	outState.putBoolean("decimalEntered", decimalEntered);
     	outState.putBoolean("enteredAfterDecimal", enteredAfterDecimal);
+        outState.putInt("spinnerPos", spinner.getSelectedItemPosition());
+        outState.putInt("spinner2Pos", spinner2.getSelectedItemPosition());
     }
 	
     @Override
