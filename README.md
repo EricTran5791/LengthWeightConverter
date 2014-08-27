@@ -14,13 +14,18 @@ A simple Android application that converts between common length and weight meas
 
 ## Available Units
 <pre><code>Length
-  in
-  cm
-  m
+  Inches (in)
+  Centimetres (cm)
+  Metres (m)
+  Feet (ft)
+  Yards (yd)
+  Kilometres (km)
+  Miles (mi)
 Weight
-  lb
-  kg
-  st
-  oz
-  g
+  Pounds (lb)
+  Kilograms (kg)
+  Stone (st)
+  Ounces (oz)
+  Grams (g)
+Milligrams (mg)
 </code></pre>

@@ -19,33 +19,49 @@ public class ConverterUtil {
 	
 	public static double convertToCentimetres(long unit, double value) {
 		int unitInt = (int) unit;
-		
-		switch (unitInt) {
-		case 0: //inches
-			return value*2.54;
-		case 1: //centimetres
-			return value;
-		case 2: //metres
-			return value*100;
-		default:
-			return value;
-		}
+
+        switch (unitInt) {
+            case 0: //inches
+                return value*2.54;
+            case 1: //centimetres
+                return value;
+            case 2: //metres
+                return value*100;
+            case 3: //feet
+                return value*30.48;
+            case 4: //yards
+                return value*91.44;
+            case 5: //kilometres
+                return value*100000;
+            case 6: //miles
+                return value*160934.4;
+            default:
+                return value;
+        }
 	}
 	
 	//convertFromCentimetres: converts from centimetres to other units
 	
 	public static double convertFromCentimetres(long unit, double value) {
 		int unitInt = (int) unit;
-		
-		switch (unitInt) {
-		case 0: //inches
-			return value*0.393701;
-		case 1: //centimetres
-			return value;
-		case 2: //metres
-			return value*0.01;
-		default:
-			return value;
+
+        switch (unitInt) {
+            case 0: //inches
+                return value*0.393701;
+            case 1: //centimetres
+                return value;
+            case 2: //metres
+                return value*0.01;
+            case 3: //feet
+                return value*0.03280839895;
+            case 4: //yards
+                return value*0.010936132983;
+            case 5: //kilometres
+                return value*0.00001;
+            case 6: //miles
+                return value*0.0000062137119224;
+            default:
+                return value;
 		}
 	}
 	
@@ -69,13 +85,15 @@ public class ConverterUtil {
 		case 0: //pounds
 			return value;
 		case 1: //kilograms
-			return value*2.20462;
+			return value*2.2046226218;
 		case 2: //stone
 			return value*14;
 		case 3: //ounces
 			return value*0.0625;
 		case 4: //grams
 			return value*0.00220462;
+        case 5: //milligrams
+			return value*0.0000022046226218;
 		default:
 			return value;
 		}
@@ -90,13 +108,15 @@ public class ConverterUtil {
 		case 0: //pounds
 			return value;
 		case 1: //kilograms
-			return value*0.453592;
+			return value*0.45359237;
 		case 2: //stone
 			return value*0.0714286;
 		case 3: //ounces
 			return value*16;
 		case 4: //grams
 			return value*453.592;
+        case 5: //milligrams
+			return value*453592.37;
 		default:
 			return value;
 		}

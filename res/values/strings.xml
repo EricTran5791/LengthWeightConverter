@@ -5,17 +5,22 @@
     <string name="action_core_overflow">Overflow</string>
 
     <string-array name="length_array">
-        <item>in</item>
-        <item>cm</item>
-        <item>m</item>
+        <item>Inches (in)</item>
+        <item>Centimetres (cm)</item>
+        <item>Metres (m)</item>
+        <item>Feet (ft)</item>
+        <item>Yards (yd)</item>
+        <item>Kilometres (km)</item>
+        <item>Miles (mi)</item>
     </string-array>
     
     <string-array name="weight_array">
-        <item>lb</item>
-        <item>kg</item>
-        <item>st</item>
-        <item>oz</item>
-        <item>g</item>
+        <item>Pounds (lb)</item>
+        <item>Kilograms (kg)</item>
+        <item>Stone (st)</item>
+        <item>Ounces (oz)</item>
+        <item>Grams (g)</item>
+        <item>Milligrams (mg)</item>
     </string-array>
 
     <color name="action_bar">#673ab7</color>

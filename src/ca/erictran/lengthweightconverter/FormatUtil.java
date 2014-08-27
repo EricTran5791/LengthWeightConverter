@@ -6,7 +6,7 @@ import java.text.DecimalFormat;
 
 public class FormatUtil {
 	
-	// extractNonDecimal: returns the non-decimal portion of a number
+	// extractNonDecimal: returns the non-decimal portion of a number string
 	
 	public static String extractNonDecimal(double s) {
 		    	
@@ -37,7 +37,14 @@ public class FormatUtil {
 	
 	public static String formatNumber(double s) {
 		
-		DecimalFormat df = new DecimalFormat("#,###.##########");
+		DecimalFormat df;
+
+        if (s > 1000000000 || s < 0.000000001 && s != 0) {
+            df = new DecimalFormat("@@###E0");
+        }
+        else {
+            df = new DecimalFormat("#,##0.##");
+        }
 
 		return df.format(s);
 	}
