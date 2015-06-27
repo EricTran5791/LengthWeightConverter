@@ -89,7 +89,7 @@ public class LengthFragment extends SherlockFragment implements OnItemSelectedLi
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.length_array, R.layout.centered_spinner_item);
         adapter2.setDropDownViewResource(R.layout.centered_spinner_dropdown_item);
         spinner2.setAdapter(adapter2);
-        spinner2.setSelection(1);
+        spinner2.setSelection(2);
         spinner2.setOnItemSelectedListener(this);
 
 		return view;

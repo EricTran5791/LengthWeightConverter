@@ -15,7 +15,7 @@ public class ConverterUtil {
 
 	}
 	
-	//convertToCentimetres: converts all units to centimetres (thus using inches as a base unit)
+	//convertToCentimetres: converts all units to centimetres (thus using centimetres as a base unit)
 	
 	public static double convertToCentimetres(long unit, double value) {
 		int unitInt = (int) unit;
@@ -23,17 +23,19 @@ public class ConverterUtil {
         switch (unitInt) {
             case 0: //inches
                 return value*2.54;
-            case 1: //centimetres
+            case 1: //millimetres
+                return value*0.1;
+            case 2: //centimetres
                 return value;
-            case 2: //metres
+            case 3: //metres
                 return value*100;
-            case 3: //feet
+            case 4: //feet
                 return value*30.48;
-            case 4: //yards
+            case 5: //yards
                 return value*91.44;
-            case 5: //kilometres
+            case 6: //kilometres
                 return value*100000;
-            case 6: //miles
+            case 7: //miles
                 return value*160934.4;
             default:
                 return value;
@@ -48,17 +50,19 @@ public class ConverterUtil {
         switch (unitInt) {
             case 0: //inches
                 return value*0.393701;
-            case 1: //centimetres
+            case 1: //millimetres
+                return value*10;
+            case 2: //centimetres
                 return value;
-            case 2: //metres
+            case 3: //metres
                 return value*0.01;
-            case 3: //feet
+            case 4: //feet
                 return value*0.03280839895;
-            case 4: //yards
+            case 5: //yards
                 return value*0.010936132983;
-            case 5: //kilometres
+            case 6: //kilometres
                 return value*0.00001;
-            case 6: //miles
+            case 7: //miles
                 return value*0.0000062137119224;
             default:
                 return value;

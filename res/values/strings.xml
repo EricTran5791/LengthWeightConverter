@@ -6,6 +6,7 @@
 
     <string-array name="length_array">
         <item>Inches (in)</item>
+        <item>Millimetres (mm)</item>
         <item>Centimetres (cm)</item>
         <item>Metres (m)</item>
         <item>Feet (ft)</item>
