@@ -20,6 +20,7 @@ A simple Android application that converts between common length and weight meas
 ## Available Units
 <pre><code>Length
   Inches (in)
+  Millimetres (mm)
   Centimetres (cm)
   Metres (m)
   Feet (ft)
